@@ -12,7 +12,7 @@
             width: 100%;
             padding: 20px;
             background-color: rgba(0,0,0,0.2);
-            margin-bottom: 30px;
+            margin-bottom: 0;
         }
         .menu-cabecalho {
             list-style: none;
@@ -42,6 +42,17 @@
             text-align: center;
             padding: 0 20px 20px;
         }
+
+        /* Banner adicionado */
+        .banner {
+            width: 100%;
+            max-width: 1200px;
+            height: auto;
+            margin: 20px 0 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(255,255,255,0.15);
+        }
+
         .conteudo-principal {
             flex: 1;
             display: flex;
@@ -101,6 +112,7 @@
             h1 { font-size: 1.6rem; }
             .aviso { font-size: 1.1rem; }
             .menu-cabecalho, .menu-rodape { gap: 15px; }
+            .banner { margin: 10px 0 20px; }
         }
     </style>
 </head>
@@ -114,6 +126,9 @@
             <li><a href="https://www.youtube.com/@QFG_Curitiba" target="_blank">ASSISTA AO VIVO</a></li>
         </ul>
     </header>
+
+    <!-- Banner adicionado -->
+    <img src="banner1.jpeg" alt="Banner Igreja Quadrangular Família Global" class="banner">
 
     <main class="conteudo-principal">
         <!-- Coloque a sua logo aqui: basta fazer upload da imagem no repositório e trocar "logo-igreja.png" pelo nome do arquivo -->
