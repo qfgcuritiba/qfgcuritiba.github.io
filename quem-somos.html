@@ -118,6 +118,34 @@
             opacity: 0.8;
         }
 
+        /* Estilo das Imagens */
+        .imagem-simples {
+            width: 220px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 12px rgba(255,215,0,0.2);
+            margin: 15px auto 25px;
+            display: block;
+        }
+        .grade-imagens {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin: 20px 0 30px;
+        }
+        .imagem-grade {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 0 12px rgba(255,215,0,0.2);
+            transition: transform 0.3s;
+        }
+        .imagem-grade:hover {
+            transform: scale(1.03);
+        }
+
         /* Rodapé */
         footer {
             width: 100%;
@@ -149,6 +177,9 @@
             h1 { font-size: 1.7rem; }
             h2 { font-size: 1.3rem; }
             p, .lista-principios { font-size: 1rem; }
+            .imagem-simples { width: 180px; }
+            .grade-imagens { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; }
+            .imagem-grade { height: 130px; }
             .menu-cabecalho, .menu-rodape { gap: 15px; }
         }
     </style>
@@ -187,11 +218,26 @@
         <p>De acordo com a visão dada por Deus a Aimee Semple McPherson.<br>
         <span class="versiculo">Ezequiel 1</span></p>
 
+        <!-- Imagem após "Quem somos nós" -->
+        <img src="imagens/im1.jpeg" alt="Imagem Quem Somos" class="imagem-simples">
+
         <h2>Nossa História!</h2>
         <p>Iniciou-se no monte de oração... Após 3 anos de busca e clamor por uma igreja que viesse amar com o amor de Cristo, recebemos a direção de Deus... Em que nós deveríamos iniciar esta obra.</p>
         <p>Uma noite, na casa de uma amiga, intercessora e profeta do Deus Altíssimo, Deus nos deu a seguinte palavra: <em>— Tenho um povo para ser pastorado por vocês.</em></p>
         <p>A partir deste momento foi dado o primeiro passo para essa obra. E no dia 19/05/2019 às 20:00 horas tivemos o primeiro culto da Igreja Quadrangular Família Global Curitiba/PR, no ministério do Bispo William Ortiz e Pastora Carla Ortiz.</p>
         <p>Culto que aconteceu na casa dos pastores, pois ainda não tínhamos um local para o templo. E assim, Deus enviou almas e provisão para esta obra continuar... Então, usamos uma frase do refrão do Hino Quadrangular como inspiração: <em>Avante pois, e sem parar...</em></p>
+
+        <!-- Imagens da Nossa História em grade responsiva -->
+        <div class="grade-imagens">
+            <img src="imagens/im2.jpeg" alt="História 2" class="imagem-grade">
+            <img src="imagens/im3.jpeg" alt="História 3" class="imagem-grade">
+            <img src="imagens/im4.jpeg" alt="História 4" class="imagem-grade">
+            <img src="imagens/im5.jpeg" alt="História 5" class="imagem-grade">
+            <img src="imagens/im6.jpeg" alt="História 6" class="imagem-grade">
+            <img src="imagens/im7.jpeg" alt="História 7" class="imagem-grade">
+            <img src="imagens/im8.jpeg" alt="História 8" class="imagem-grade">
+            <img src="imagens/im9.jpeg" alt="História 9" class="imagem-grade">
+        </div>
 
         <h2>Nossa Visão!</h2>
         <p>A fundadora da Igreja Quadrangular, Aimee Semple McPherson, trouxe para nós a visão de Ezequiel 1 — revelando a visão da igreja dada pelo próprio Deus a ela.</p>
