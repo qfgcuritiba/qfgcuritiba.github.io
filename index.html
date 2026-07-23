@@ -112,6 +112,96 @@
             background-color: rgba(255,255,255,0.05);
         }
 
+        /* --- ASSISTENTE VIRTUAL --- */
+        .botao-assistente {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #ffd700;
+            color: #1a1a2e;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 0 15px rgba(255,215,0,0.4);
+            transition: transform 0.3s;
+            z-index: 1000;
+        }
+        .botao-assistente:hover {
+            transform: scale(1.1);
+        }
+
+        .caixa-chat {
+            position: fixed;
+            bottom: 100px;
+            right: 25px;
+            width: 320px;
+            background-color: rgba(22, 33, 62, 0.98);
+            border: 1px solid #ffd700;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(255,215,0,0.2);
+            display: none;
+            flex-direction: column;
+            z-index: 1000;
+        }
+        .cabecalho-chat {
+            background-color: rgba(255,215,0,0.15);
+            padding: 12px;
+            border-radius: 10px 10px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255,215,0,0.3);
+        }
+        .cabecalho-chat h4 {
+            color: #ffd700;
+            font-size: 1rem;
+        }
+        .btn-fechar {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            opacity: 0.7;
+        }
+        .btn-fechar:hover { opacity: 1; }
+
+        .corpo-chat {
+            padding: 15px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .mensagem {
+            margin-bottom: 12px;
+            padding: 8px 12px;
+            background-color: rgba(255,255,255,0.05);
+            border-radius: 8px;
+        }
+        .btn-opcao {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            background-color: rgba(255,215,0,0.1);
+            border: 1px solid #ffd700;
+            border-radius: 8px;
+            color: #ffd700;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: center;
+            text-decoration: none;
+        }
+        .btn-opcao:hover {
+            background-color: #ffd700;
+            color: #1a1a2e;
+        }
+
         /* Rodapé */
         footer {
             width: 100%;
@@ -144,6 +234,8 @@
             .menu-cabecalho, .menu-rodape { gap: 15px; }
             .banner { margin: 0 0 20px; }
             .tabela-horarios th, .tabela-horarios td { padding: 8px; font-size: 0.9rem; }
+            .caixa-chat { width: 90%; right: 5%; bottom: 90px; }
+            .botao-assistente { right: 15px; bottom: 15px; }
         }
     </style>
 </head>
@@ -212,5 +304,47 @@
             <li><a href="https://wa.me/5541997721943" target="_blank">Fale Conosco</a></li>
         </ul>
     </footer>
+
+    <!-- --- ASSISTENTE VIRTUAL --- -->
+    <button class="botao-assistente" onclick="abrirChat()">?</button>
+
+    <div class="caixa-chat" id="caixaChat">
+        <div class="cabecalho-chat">
+            <h4>🤝 Assistente QFG</h4>
+            <button class="btn-fechar" onclick="fecharChat()">×</button>
+        </div>
+        <div class="corpo-chat">
+            <div class="mensagem">
+                Olá! Tudo bem? 😊<br>
+                Que bom que você está aqui!<br>
+                Gostaria de fazer um momento de devocional com a Palavra de Deus?
+            </div>
+            <a href="#" class="btn-opcao" onclick="mostrarDevocional(event)">📖 Sim, quero devocional!</a>
+            <a href="#" class="btn-opcao" onclick="fecharChat()">🙌 Mais tarde</a>
+
+            <div id="areaDevocional" style="display: none; margin-top: 10px;">
+                <div class="mensagem">
+                    <strong>✨ Palavra para hoje:</strong><br><br>
+                    "Porque eu bem sei os pensamentos que tenho a vosso respeito, diz o Senhor; pensamentos de paz, e não de mal, para vos dar o fim que esperais."<br>
+                    <em>Jeremias 29:11</em><br><br>
+                    Que este versinho abençoe o seu coração! ❤️
+                </div>
+                <a href="https://www.youtube.com/@QFG_Curitiba" target="_blank" class="btn-opcao">🎥 Assista mensagens</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function abrirChat() {
+            document.getElementById('caixaChat').style.display = 'flex';
+        }
+        function fecharChat() {
+            document.getElementById('caixaChat').style.display = 'none';
+        }
+        function mostrarDevocional(e) {
+            e.preventDefault();
+            document.getElementById('areaDevocional').style.display = 'block';
+        }
+    </script>
 </body>
 </html>
