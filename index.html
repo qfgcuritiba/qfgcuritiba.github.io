@@ -63,7 +63,7 @@
         .logo {
             width: 280px;
             height: 280px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             border-radius: 50%;
             box-shadow: 0 0 25px rgba(255,255,255,0.2);
         }
@@ -81,6 +81,35 @@
             margin-top: 30px;
             font-size: 1rem;
             opacity: 0.75;
+        }
+
+        /* Título da Tabela */
+        .titulo-horarios {
+            font-size: 1.8rem;
+            color: #ffd700;
+            margin: 15px 0 10px;
+            font-weight: bold;
+        }
+
+        /* Estilo da Tabela de Horários */
+        .tabela-horarios {
+            margin: 0 0 25px;
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 500px;
+        }
+        .tabela-horarios th, .tabela-horarios td {
+            border: 1px solid rgba(255,215,0,0.3);
+            padding: 12px;
+            text-align: center;
+        }
+        .tabela-horarios th {
+            background-color: rgba(255,215,0,0.15);
+            color: #ffd700;
+            font-weight: bold;
+        }
+        .tabela-horarios tr:hover {
+            background-color: rgba(255,255,255,0.05);
         }
 
         /* Rodapé */
@@ -110,9 +139,11 @@
         @media (max-width: 500px) {
             .logo { width: 200px; height: 200px; }
             h1 { font-size: 1.6rem; }
+            .titulo-horarios { font-size: 1.4rem; }
             .aviso { font-size: 1.1rem; }
             .menu-cabecalho, .menu-rodape { gap: 15px; }
             .banner { margin: 10px 0 20px; }
+            .tabela-horarios th, .tabela-horarios td { padding: 8px; font-size: 0.9rem; }
         }
     </style>
 </head>
@@ -134,6 +165,35 @@
     <main class="conteudo-principal">
         <!-- Coloque a sua logo aqui: basta fazer upload da imagem no repositório e trocar "logo-igreja.png" pelo nome do arquivo -->
         <img src="logo-igreja.png" alt="Logo Igreja Quadrangular Família Global" class="logo">
+
+        <!-- Título e Tabela de Horários dos Cultos -->
+        <h2 class="titulo-horarios">Nossos Horários</h2>
+        <table class="tabela-horarios">
+            <tr>
+                <th>Dia</th>
+                <th>Horário</th>
+                <th>Atividade</th>
+            </tr>
+            <tr>
+                <td>Domingo</td>
+                <td>19:00</td>
+                <td>Culto da Família</td>
+            </tr>
+            <tr>
+                <td>Quarta-feira</td>
+                <td>20:00</td>
+                <td>Quarta de Milagres</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Sábado</td>
+                <td>18:00</td>
+                <td>Escola Bíblica</td>
+            </tr>
+            <tr>
+                <td>20:00</td>
+                <td>Inconformados</td>
+            </tr>
+        </table>
 
         <h1>Igreja Quadrangular Família Global</h1>
         <p class="aviso">Nosso site está em construção...</p>
