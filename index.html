@@ -22,14 +22,14 @@
             flex-wrap: wrap;
         }
         .menu-cabecalho a {
-            color: white; /* Mesma cor do rodapé */
+            color: white;
             text-decoration: none;
-            font-size: 0.95rem; /* Mesmo tamanho do rodapé */
+            font-size: 0.95rem;
             transition: color 0.3s;
-            font-weight: normal; /* Remove o negrito, igual ao rodapé */
+            font-weight: normal;
         }
         .menu-cabecalho a:hover {
-            color: #ffd700; /* Mesma cor ao passar o mouse do rodapé */
+            color: #ffd700;
         }
 
         body {
@@ -112,7 +112,7 @@
             background-color: rgba(255,255,255,0.05);
         }
 
-        /* --- ASSISTENTE VIRTUAL --- */
+        /* --- ASSISTENTE VIRTUAL - BOTÃO AJUSTADO --- */
         .botao-assistente {
             position: fixed;
             bottom: 25px;
@@ -120,18 +120,18 @@
             background-color: #ffd700;
             color: #1a1a2e;
             border: none;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            font-size: 28px;
+            border-radius: 25px;
+            padding: 12px 20px;
+            font-size: 0.95rem;
             font-weight: bold;
             cursor: pointer;
             box-shadow: 0 0 15px rgba(255,215,0,0.4);
             transition: transform 0.3s;
             z-index: 1000;
+            white-space: nowrap;
         }
         .botao-assistente:hover {
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
 
         .caixa-chat {
@@ -235,7 +235,7 @@
             .banner { margin: 0 0 20px; }
             .tabela-horarios th, .tabela-horarios td { padding: 8px; font-size: 0.9rem; }
             .caixa-chat { width: 90%; right: 5%; bottom: 90px; }
-            .botao-assistente { right: 15px; bottom: 15px; }
+            .botao-assistente { right: 15px; bottom: 15px; font-size: 0.85rem; padding: 10px 16px; }
         }
     </style>
 </head>
