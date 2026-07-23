@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem Somos - Igreja Quadrangular Família Global</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        
+        /* Cabeçalho */
+        header {
+            width: 100%;
+            padding: 20px;
+            background-color: rgba(0,0,0,0.2);
+            margin-bottom: 0;
+        }
+        .menu-cabecalho {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .menu-cabecalho a {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: opacity 0.3s;
+        }
+        .menu-cabecalho a:hover {
+            opacity: 0.7;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px 20px;
+            position: relative;
+        }
+
+        /* Logo como Marca d'Água */
+        .marca-dagua {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 450px;
+            height: 450px;
+            opacity: 0.08;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .conteudo-principal {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding-top: 30px;
+        }
+
+        /* Botão Voltar */
+        .btn-voltar {
+            align-self: flex-start;
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: opacity 0.3s;
+        }
+        .btn-voltar:hover {
+            opacity: 0.7;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            color: #ffd700;
+        }
+        h2 {
+            font-size: 1.6rem;
+            margin: 30px 0 15px;
+            color: #ffd700;
+            text-align: left;
+            width: 100%;
+        }
+        p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 12px;
+            text-align: justify;
+            opacity: 0.92;
+        }
+        .lista-principios {
+            margin: 15px 0 15px 25px;
+            text-align: left;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: #ffd700;
+            font-weight: bold;
+        }
+        .versiculo {
+            font-style: italic;
+            margin-top: 10px;
+            opacity: 0.8;
+        }
+
+        /* Rodapé */
+        footer {
+            width: 100%;
+            padding: 20px;
+            background-color: rgba(0,0,0,0.2);
+            margin-top: 40px;
+            position: relative;
+            z-index: 1;
+        }
+        .menu-rodape {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .menu-rodape a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        .menu-rodape a:hover {
+            color: #ffd700;
+        }
+
+        @media (max-width: 500px) {
+            .marca-dagua { width: 300px; height: 300px; }
+            h1 { font-size: 1.7rem; }
+            h2 { font-size: 1.3rem; }
+            p, .lista-principios { font-size: 1rem; }
+            .menu-cabecalho, .menu-rodape { gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Logo como Marca d'Água -->
+    <img src="logo-igreja.png" alt="Marca d'água - Igreja Quadrangular Família Global" class="marca-dagua">
+
+    <!-- Cabeçalho -->
+    <header>
+        <ul class="menu-cabecalho">
+            <li><a href="quem-somos.html">Quem somos</a></li>
+            <li><a href="#">Ministérios</a></li>
+            <li><a href="#">Agenda</a></li>
+            <li><a href="https://www.youtube.com/@QFG_Curitiba" target="_blank">ASSISTA AO VIVO</a></li>
+            <li><a href="#">Projetos Sociais</a></li>
+        </ul>
+    </header>
+
+    <main class="conteudo-principal">
+        <!-- Link Voltar -->
+        <a href="index.html" class="btn-voltar">← Voltar para página inicial</a>
+
+        <h1>Quem Somos</h1>
+
+        <h2>Quem somos nós???</h2>
+        <p>Somos a Igreja Quadrangular Família Global, uma igreja que nasceu no coração de Deus. Somos uma igreja pentecostal, 100% Família. Uma igreja que está resgatando as raízes da Cruzada Nacional de Evangelização...</p>
+        
+        <div class="lista-principios">
+            (1) Jesus Cristo Salva!<br>
+            (2) Jesus Cristo batiza com o Espírito Santo!<br>
+            (3) Jesus Cristo Cura!<br>
+            (4) Jesus Cristo em breve voltará.
+        </div>
+
+        <p>De acordo com a visão dada por Deus a Aimee Semple McPherson.<br>
+        <span class="versiculo">Ezequiel 1</span></p>
+
+        <h2>Nossa História!</h2>
+        <p>Iniciou-se no monte de oração... Após 3 anos de busca e clamor por uma igreja que viesse amar com o amor de Cristo, recebemos a direção de Deus... Em que nós deveríamos iniciar esta obra.</p>
+        <p>Uma noite, na casa de uma amiga, intercessora e profeta do Deus Altíssimo, Deus nos deu a seguinte palavra: <em>— Tenho um povo para ser pastorado por vocês.</em></p>
+        <p>A partir deste momento foi dado o primeiro passo para essa obra. E no dia 19/05/2019 às 20:00 horas tivemos o primeiro culto da Igreja Quadrangular Família Global Curitiba/PR, no ministério do Bispo William Ortiz e Pastora Carla Ortiz.</p>
+        <p>Culto que aconteceu na casa dos pastores, pois ainda não tínhamos um local para o templo. E assim, Deus enviou almas e provisão para esta obra continuar... Então, usamos uma frase do refrão do Hino Quadrangular como inspiração: <em>Avante pois, e sem parar...</em></p>
+
+        <h2>Nossa Visão!</h2>
+        <p>A fundadora da Igreja Quadrangular, Aimee Semple McPherson, trouxe para nós a visão de Ezequiel 1 — revelando a visão da igreja dada pelo próprio Deus a ela.</p>
+        <p>Jesus Cristo salva, batiza com o Espírito Santo, cura e em breve voltará. Temos a visão cristocêntrica, organizada e regida nos cinco ministérios (Efésios 4: 11 e 12), na visão de abençoar famílias, ganhar almas e cuidar bem delas.</p>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <ul class="menu-rodape">
+            <li><a href="#">Redes Sociais</a></li>
+            <li><a href="#">Dízimos e Ofertas</a></li>
+            <li><a href="#">Escolas</a></li>
+            <li><a href="https://wa.me/5541997721943" target="_blank">Fale Conosco</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
