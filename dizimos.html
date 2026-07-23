@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dízimos e Ofertas - Igreja Quadrangular Família Global</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        
+        /* Cabeçalho */
+        header {
+            width: 100%;
+            padding: 20px;
+            background-color: rgba(0,0,0,0.2);
+            margin-bottom: 0;
+        }
+        .menu-cabecalho {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .menu-cabecalho a {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: opacity 0.3s;
+        }
+        .menu-cabecalho a:hover {
+            opacity: 0.7;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px 20px;
+            position: relative;
+        }
+
+        /* Logo como Marca d'Água */
+        .marca-dagua {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 450px;
+            height: 450px;
+            opacity: 0.08;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .conteudo-principal {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            padding-top: 30px;
+        }
+
+        /* Botão Voltar */
+        .btn-voltar {
+            align-self: flex-start;
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: opacity 0.3s;
+        }
+        .btn-voltar:hover {
+            opacity: 0.7;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 25px;
+            color: #ffd700;
+            line-height: 1.4;
+        }
+
+        /* Imagem */
+        .imagem-pagina {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(255,215,0,0.25);
+            margin-bottom: 30px;
+        }
+
+        /* Dados do PIX */
+        .dados-pix {
+            background-color: rgba(255,215,0,0.08);
+            border: 1px solid rgba(255,215,0,0.3);
+            border-radius: 8px;
+            padding: 20px;
+            width: 100%;
+            max-width: 450px;
+            margin-bottom: 25px;
+            text-align: left;
+        }
+        .dados-pix p {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        .destaque {
+            color: #ffd700;
+            font-weight: bold;
+        }
+
+        /* Lembrete */
+        .lembrete {
+            background-color: rgba(255,255,255,0.05);
+            border-left: 4px solid #ffd700;
+            padding: 15px 20px;
+            text-align: left;
+            width: 100%;
+            max-width: 450px;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+
+        /* Rodapé */
+        footer {
+            width: 100%;
+            padding: 20px;
+            background-color: rgba(0,0,0,0.2);
+            margin-top: 40px;
+            position: relative;
+            z-index: 1;
+        }
+        .menu-rodape {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .menu-rodape a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        .menu-rodape a:hover {
+            color: #ffd700;
+        }
+
+        @media (max-width: 500px) {
+            .marca-dagua { width: 300px; height: 300px; }
+            h1 { font-size: 1.6rem; }
+            .dados-pix p, .lembrete { font-size: 1rem; }
+            .menu-cabecalho, .menu-rodape { gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Logo como Marca d'Água -->
+    <img src="logo-igreja.png" alt="Marca d'água - Igreja Quadrangular Família Global" class="marca-dagua">
+
+    <!-- Cabeçalho -->
+    <header>
+        <ul class="menu-cabecalho">
+            <li><a href="quem-somos.html">Quem somos</a></li>
+            <li><a href="ministerios.html">Ministérios</a></li>
+            <li><a href="#">Agenda</a></li>
+            <li><a href="https://www.youtube.com/@QFG_Curitiba" target="_blank">ASSISTA AO VIVO</a></li>
+            <li><a href="#">Projetos Sociais</a></li>
+        </ul>
+    </header>
+
+    <main class="conteudo-principal">
+        <!-- Link Voltar -->
+        <a href="index.html" class="btn-voltar">← Voltar para página inicial</a>
+
+        <h1>Deus o abençoe e o prospere poderosamente</h1>
+
+        <!-- Imagem -->
+        <img src="imagens/im10.jpeg" alt="Deus Abençoa" class="imagem-pagina">
+
+        <!-- Dados PIX -->
+        <div class="dados-pix">
+            <p><span class="destaque">Chave PIX:</span> qfgcuritibaavante@gmail.com</p>
+            <p><span class="destaque">Nome:</span> William Lima Ortiz</p>
+        </div>
+
+        <!-- Lembrete -->
+        <div class="lembrete">
+            <strong>Lembrete:</strong><br>
+            • Se for Dízimo, inserir no campo descrição do PIX: <strong>Dízimo site</strong><br>
+            • Se for Oferta, inserir no campo descrição do PIX: <strong>Oferta site</strong>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <ul class="menu-rodape">
+            <li><a href="#">Redes Sociais</a></li>
+            <li><a href="dizimos.html">Dízimos e Ofertas</a></li>
+            <li><a href="#">Escolas</a></li>
+            <li><a href="https://wa.me/5541997721943" target="_blank">Fale Conosco</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
