@@ -1,1 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Em Construção - Igreja Quadrangular Família Global</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        
+        /* Cabeçalho */
+        header {
+            width: 100%;
+            padding: 20px;
+            background-color: rgba(0,0,0,0.2);
+            margin-bottom: 0;
+        }
+        .menu-cabecalho {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .menu-cabecalho a {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: opacity 0.3s;
+        }
+        .menu-cabecalho a:hover {
+            opacity: 0.7;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px 20px;
+            position: relative;
+        }
+
+        /* Logo como Marca d'Água */
+        .marca-dagua {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 450px;
+            height: 450px;
+            opacity: 0.08;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .conteudo-principal {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            padding-top: 30px;
+            width: 100%;
+        }
+
+        /* Botão Voltar */
+        .btn-voltar {
+            align-self: flex-start;
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: opacity 0.3s;
+        }
+        .btn-voltar:hover {
+            opacity: 0.7;
+        }
+
+        /* Mensagem de Construção */
+        .caixa-construcao {
+            padding: 40px 30px;
+            border: 2px solid rgba(255,215,0,0.3);
+            border-radius: 12px;
+            background-color: rgba(255,255,255,0.03);
+            box-shadow: 0 0 20px rgba(255,215,0,0.1);
+        }
+        .enfeite {
+            color: #ffd700;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            letter-spacing: 8px;
+        }
+        .titulo-construcao {
+            font-size: 1.8rem;
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+        .texto-construcao {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        /* Rodapé */
+        footer {
+            width: 100%;
+            padding: 20px;
+            background-color: rgba(0,0,0,0.2);
+            margin-top: 40px;
+            position: relative;
+            z-index: 1;
+        }
+        .menu-rodape {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .menu-rodape a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        .menu-rodape a:hover {
+            color: #ffd700;
+        }
+
+        @media (max-width: 500px) {
+            .marca-dagua { width: 300px; height: 300px; }
+            .enfeite { font-size: 2rem; }
+            .titulo-construcao { font-size: 1.5rem; }
+            .texto-construcao { font-size: 1.05rem; }
+            .menu-cabecalho, .menu-rodape { gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Logo como Marca d'Água -->
+    <img src="logo-igreja.png" alt="Marca d'água - Igreja Quadrangular Família Global" class="marca-dagua">
+
+    <!-- Cabeçalho -->
+    <header>
+        <ul class="menu-cabecalho">
+            <li><a href="quem-somos.html">Quem somos</a></li>
+            <li><a href="ministerios.html">Ministérios</a></li>
+            <li><a href="agenda.html">Agenda</a></li>
+            <li><a href="https://www.youtube.com/@QFG_Curitiba" target="_blank">ASSISTA AO VIVO</a></li>
+            <li><a href="projetos.html">Projetos Sociais</a></li>
+        </ul>
+    </header>
+
+    <main class="conteudo-principal">
+        <!-- Link Voltar -->
+        <a href="index.html" class="btn-voltar">← Voltar para página inicial</a>
+
+        <div class="caixa-construcao">
+            <div class="enfeite">✦ ✦ ✦</div>
+            <h2 class="titulo-construcao">Página em Construção</h2>
+            <p class="texto-construcao">
+                Estamos preparando algo especial para você!<br>
+                Em breve teremos novidades abençoadas.<br>
+                <br>
+                Deus abençoe a todos! ❤️
+            </p>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <ul class="menu-rodape">
+            <li><a href="redes.html">Redes Sociais</a></li>
+            <li><a href="dizimos.html">Dízimos e Ofertas</a></li>
+            <li><a href="escolas.html">Escolas</a></li>
+            <li><a href="https://wa.me/5541997721943" target="_blank">Fale Conosco</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
 
