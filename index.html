@@ -305,7 +305,7 @@
         </ul>
     </footer>
 
-    <!-- --- ASSISTENTE VIRTUAL --- -->
+    <!-- --- ASSISTENTE COM VERSÍCULO AUTOMÁTICO --- -->
     <button class="botao-assistente" onclick="abrirChat()">?</button>
 
     <div class="caixa-chat" id="caixaChat">
@@ -317,17 +317,14 @@
             <div class="mensagem">
                 Olá! Tudo bem? 😊<br>
                 Que bom que você está aqui!<br>
-                Gostaria de fazer um momento de devocional com a Palavra de Deus?
+                Gostaria de receber a Palavra de Deus para hoje?
             </div>
-            <a href="#" class="btn-opcao" onclick="mostrarDevocional(event)">📖 Sim, quero devocional!</a>
+            <a href="#" class="btn-opcao" onclick="mostrarDevocional(event)">📖 Sim, quero a Palavra!</a>
             <a href="#" class="btn-opcao" onclick="fecharChat()">🙌 Mais tarde</a>
 
             <div id="areaDevocional" style="display: none; margin-top: 10px;">
-                <div class="mensagem">
-                    <strong>✨ Palavra para hoje:</strong><br><br>
-                    "Porque eu bem sei os pensamentos que tenho a vosso respeito, diz o Senhor; pensamentos de paz, e não de mal, para vos dar o fim que esperais."<br>
-                    <em>Jeremias 29:11</em><br><br>
-                    Que este versinho abençoe o seu coração! ❤️
+                <div class="mensagem" id="versiculoDoDia">
+                    <!-- O versículo vai aparecer aqui automaticamente -->
                 </div>
                 <a href="https://www.youtube.com/@QFG_Curitiba" target="_blank" class="btn-opcao">🎥 Assista mensagens</a>
             </div>
@@ -335,6 +332,29 @@
     </div>
 
     <script>
+        // Lista com versículos para cada dia do ano (você pode adicionar quantos quiser)
+        const versiculos = [
+            '"Porque eu bem sei os pensamentos que tenho a vosso respeito, diz o Senhor; pensamentos de paz, e não de mal, para vos dar o fim que esperais."<br><em>Jeremias 29:11</em>',
+            '"Mas a Deus agradecemos, que nos dá a vitória por nosso Senhor Jesus Cristo."<br><em>1 Coríntios 15:57</em>',
+            '"E eis que eu estou convosco todos os dias, até a consumação dos séculos."<br><em>Mateus 28:20</em>',
+            '"O Senhor é o meu pastor, nada me faltará."<br><em>Salmos 23:1</em>',
+            '"Porque Deus amou o mundo de tal maneira que deu o seu Filho Unigênito, para que todo aquele que nele crer não pereça, mas tenha a vida eterna."<br><em>João 3:16</em>',
+            '"E tudo o que pedirdes em oração, crendo, recebereis."<br><em>Mateus 21:22</em>',
+            '"Mas buscai primeiro o seu reino e a sua justiça, e todas estas coisas vos serão acrescentadas."<br><em>Mateus 6:33</em>',
+            '"Eu vos fiz amigos, porque tudo o que ouvi de meu Pai vos dei a conhecer."<br><em>João 15:15</em>',
+            '"Não temas, pois eu sou contigo; não te assombres, pois eu sou o teu Deus; eu te fortaleço, e te ajudo, e te sustento com a destra da minha justiça."<br><em>Isaías 41:10</em>',
+            '"Se Deus é por nós, quem será contra nós?"<br><em>Romanos 8:31</em>'
+            // Continue adicionando mais versículos aqui até completar 365!
+        ];
+
+        // Função que pega o versículo baseado na data atual
+        function pegarVersiculoDoDia() {
+            const hoje = new Date();
+            const diaDoAno = Math.ceil((hoje - new Date(hoje.getFullYear(), 0, 0)) / 86400000);
+            const indice = diaDoAno % versiculos.length;
+            return versiculos[indice];
+        }
+
         function abrirChat() {
             document.getElementById('caixaChat').style.display = 'flex';
         }
@@ -343,6 +363,7 @@
         }
         function mostrarDevocional(e) {
             e.preventDefault();
+            document.getElementById('versiculoDoDia').innerHTML = `<strong>✨ Palavra para hoje:</strong><br><br>` + pegarVersiculoDoDia();
             document.getElementById('areaDevocional').style.display = 'block';
         }
     </script>
