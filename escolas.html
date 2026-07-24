@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Em Construção - Igreja Quadrangular Família Global</title>
+    <title>Escolas - Igreja Quadrangular Família Global</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
         
@@ -62,10 +62,10 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             position: relative;
             z-index: 1;
-            max-width: 700px;
+            max-width: 850px;
             padding-top: 30px;
             width: 100%;
         }
@@ -76,7 +76,7 @@
             color: #ffd700;
             text-decoration: none;
             font-weight: bold;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             display: flex;
             align-items: center;
             gap: 5px;
@@ -86,29 +86,47 @@
             opacity: 0.7;
         }
 
-        /* Mensagem de Construção */
-        .caixa-construcao {
-            padding: 40px 30px;
-            border: 2px solid rgba(255,215,0,0.3);
-            border-radius: 12px;
-            background-color: rgba(255,255,255,0.03);
-            box-shadow: 0 0 20px rgba(255,215,0,0.1);
-        }
-        .enfeite {
+        h1 {
+            font-size: 2.2rem;
             color: #ffd700;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            letter-spacing: 8px;
+            margin-bottom: 35px;
         }
-        .titulo-construcao {
-            font-size: 1.8rem;
+
+        /* Estilo de Cada Escola */
+        .escola {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            padding: 25px 20px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid rgba(255,215,0,0.25);
+            text-align: left;
+        }
+        .escola:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        .imagem-escola {
+            width: 100%;
+            max-width: 280px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(255,215,0,0.2);
+            flex-shrink: 0;
+        }
+        .conteudo-escola {
+            flex: 1;
+        }
+        .titulo-escola {
+            font-size: 1.5rem;
             color: #ffd700;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
-        .texto-construcao {
-            font-size: 1.2rem;
-            line-height: 1.6;
+        .texto-escola {
+            font-size: 1rem;
+            line-height: 1.7;
             opacity: 0.9;
+            text-align: justify;
         }
 
         /* Rodapé - PADRONIZADO */
@@ -116,7 +134,7 @@
             width: 100%;
             padding: 20px;
             background-color: rgba(0,0,0,0.2);
-            margin-top: 40px;
+            margin-top: 20px;
             position: relative;
             z-index: 1;
         }
@@ -137,11 +155,21 @@
             color: #ffd700;
         }
 
+        @media (max-width: 700px) {
+            .escola, .escola:nth-child(even) {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px 15px;
+            }
+            .imagem-escola { max-width: 85%; }
+            .texto-escola { text-align: center; }
+        }
+
         @media (max-width: 500px) {
             .marca-dagua { width: 300px; height: 300px; }
-            .enfeite { font-size: 2rem; }
-            .titulo-construcao { font-size: 1.5rem; }
-            .texto-construcao { font-size: 1.05rem; }
+            h1 { font-size: 1.7rem; }
+            .titulo-escola { font-size: 1.3rem; }
+            .texto-escola { font-size: 0.95rem; }
             .menu-cabecalho, .menu-rodape { gap: 15px; }
         }
     </style>
@@ -162,18 +190,41 @@
     </header>
 
     <main class="conteudo-principal">
-        <!-- Link Voltar -->
         <a href="index.html" class="btn-voltar">← Voltar para página inicial</a>
 
-        <div class="caixa-construcao">
-            <div class="enfeite">✦ ✦ ✦</div>
-            <h2 class="titulo-construcao">Página em Construção</h2>
-            <p class="texto-construcao">
-                Estamos preparando algo especial para você!<br>
-                Em breve teremos novidades abençoadas.<br>
-                <br>
-                Deus abençoe a todos! ❤️
-            </p>
+        <h1>📚 Nossas Escolas</h1>
+
+        <!-- Escola Sacerdócio Real -->
+        <div class="escola">
+            <img src="imagens/im10.jpeg" alt="Escola Sacerdócio Real" class="imagem-escola">
+            <div class="conteudo-escola">
+                <h2 class="titulo-escola">Escola Sacerdócio Real</h2>
+                <p class="texto-escola">
+                    Voltada para o ensino da Palavra e o aperfeiçoamento da vida espiritual, capacitando cada filho de Deus a exercer com excelência o seu sacerdócio, conforme a Palavra que diz: "Mas vós sois a geração eleita, o sacerdócio real, a nação santa, o povo adquirido, para que anuncieis as virtudes daquele que vos chamou das trevas para a sua maravilhosa luz".
+                </p>
+            </div>
+        </div>
+
+        <!-- Escola Ester -->
+        <div class="escola">
+            <img src="imagens/im11.jpeg" alt="Escola Ester" class="imagem-escola">
+            <div class="conteudo-escola">
+                <h2 class="titulo-escola">Escola Ester</h2>
+                <p class="texto-escola">
+                    Ministério voltado para as mulheres, com o propósito de fortalecer a identidade feminina em Cristo, preparando e capacitando para viverem com propósito, dignidade e fé, assim como Ester, que foi levantada para um tempo e para um propósito específico nas mãos de Deus.
+                </p>
+            </div>
+        </div>
+
+        <!-- Escola Bíblica -->
+        <div class="escola">
+            <img src="imagens/im12.jpeg" alt="Escola Bíblica" class="imagem-escola">
+            <div class="conteudo-escola">
+                <h2 class="titulo-escola">Escola Bíblica</h2>
+                <p class="texto-escola">
+                    Oportunidade para todos conhecerem profundamente a Palavra de Deus, crescerem na fé e serem edificados através do estudo sistemático das Escrituras, formando uma base sólida para uma caminhada firme e alicerçada em Jesus Cristo.
+                </p>
+            </div>
         </div>
     </main>
 
