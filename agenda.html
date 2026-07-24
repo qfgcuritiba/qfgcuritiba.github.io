@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Em Construção - Igreja Quadrangular Família Global</title>
+    <title>Agenda - Igreja Quadrangular Família Global</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
         
-        /* Cabeçalho - MESMO PADRÃO DO INDEX */
+        /* Cabeçalho - PADRONIZADO */
         header {
             width: 100%;
             padding: 20px;
@@ -62,10 +62,10 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             position: relative;
             z-index: 1;
-            max-width: 700px;
+            max-width: 900px;
             padding-top: 30px;
             width: 100%;
         }
@@ -76,7 +76,7 @@
             color: #ffd700;
             text-decoration: none;
             font-weight: bold;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             display: flex;
             align-items: center;
             gap: 5px;
@@ -86,32 +86,85 @@
             opacity: 0.7;
         }
 
-        /* Mensagem de Construção */
-        .caixa-construcao {
-            padding: 40px 30px;
-            border: 2px solid rgba(255,215,0,0.3);
-            border-radius: 12px;
-            background-color: rgba(255,255,255,0.03);
-            box-shadow: 0 0 20px rgba(255,215,0,0.1);
-        }
-        .enfeite {
+        h1 {
+            font-size: 2.2rem;
             color: #ffd700;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            letter-spacing: 8px;
+            margin-bottom: 10px;
         }
-        .titulo-construcao {
-            font-size: 1.8rem;
-            color: #ffd700;
-            margin-bottom: 15px;
-        }
-        .texto-construcao {
-            font-size: 1.2rem;
-            line-height: 1.6;
+        .subtitulo {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
             opacity: 0.9;
         }
 
-        /* Rodapé - MESMO PADRÃO DO INDEX */
+        /* Estilo da Agenda */
+        .grade-mes {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 8px;
+            margin-bottom: 25px;
+        }
+        .cabecalho-dia {
+            padding: 10px;
+            background-color: rgba(255,215,0,0.15);
+            color: #ffd700;
+            font-weight: bold;
+            border-radius: 6px;
+        }
+        .dia-vazio {
+            background-color: rgba(255,255,255,0.02);
+            border-radius: 6px;
+            min-height: 100px;
+        }
+        .dia-evento {
+            background-color: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,215,0,0.2);
+            border-radius: 6px;
+            padding: 8px;
+            min-height: 100px;
+            text-align: left;
+        }
+        .numero-dia {
+            color: #ffd700;
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 0.95rem;
+        }
+        .evento {
+            font-size: 0.85rem;
+            line-height: 1.4;
+            margin-bottom: 3px;
+            padding-left: 5px;
+            border-left: 2px solid rgba(255,215,0,0.4);
+        }
+        .evento-especial {
+            color: #ffd700;
+            font-weight: bold;
+        }
+
+        /* Legenda */
+        .legenda {
+            width: 100%;
+            max-width: 600px;
+            text-align: left;
+            padding: 15px;
+            border: 1px solid rgba(255,215,0,0.2);
+            border-radius: 8px;
+            background-color: rgba(255,255,255,0.03);
+            margin-bottom: 20px;
+        }
+        .legenda h4 {
+            color: #ffd700;
+            margin-bottom: 8px;
+        }
+        .legenda p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            opacity: 0.9;
+        }
+
+        /* Rodapé - PADRONIZADO */
         footer {
             width: 100%;
             padding: 20px;
@@ -137,11 +190,16 @@
             color: #ffd700;
         }
 
+        @media (max-width: 768px) {
+            .grade-mes { gap: 5px; }
+            .dia-evento, .dia-vazio { min-height: 80px; padding: 5px; }
+            .evento { font-size: 0.75rem; }
+            .numero-dia { font-size: 0.85rem; }
+        }
         @media (max-width: 500px) {
             .marca-dagua { width: 300px; height: 300px; }
-            .enfeite { font-size: 2rem; }
-            .titulo-construcao { font-size: 1.5rem; }
-            .texto-construcao { font-size: 1.05rem; }
+            h1 { font-size: 1.7rem; }
+            .subtitulo { font-size: 1rem; }
             .menu-cabecalho, .menu-rodape { gap: 15px; }
         }
     </style>
@@ -150,7 +208,7 @@
     <!-- Logo como Marca d'Água -->
     <img src="logo-igreja.png" alt="Marca d'água - Igreja Quadrangular Família Global" class="marca-dagua">
 
-    <!-- Cabeçalho - PADRONIZADO COM O INDEX -->
+    <!-- Cabeçalho PADRONIZADO -->
     <header>
         <ul class="menu-cabecalho">
             <li><a href="quem-somos.html">Quem somos</a></li>
@@ -162,22 +220,236 @@
     </header>
 
     <main class="conteudo-principal">
-        <!-- Link Voltar -->
         <a href="index.html" class="btn-voltar">← Voltar para página inicial</a>
 
-        <div class="caixa-construcao">
-            <div class="enfeite">✦ ✦ ✦</div>
-            <h2 class="titulo-construcao">Página em Construção</h2>
-            <p class="texto-construcao">
-                Estamos preparando algo especial para você!<br>
-                Em breve teremos novidades abençoadas.<br>
-                <br>
-                Deus abençoe a todos! ❤️
-            </p>
+        <h1>📅 Agenda - Agosto de 2026</h1>
+        <p class="subtitulo">Confira todos os nossos encontros e atividades!</p>
+
+        <!-- Legenda Rápida -->
+        <div class="legenda">
+            <h4>📌 Atividades Semanais:</h4>
+            <p>• Segunda: Projeto Jonas 18h | 1ª do mês: Oração Legendários 05h<br>
+            • Terça: Escola de Ester 20h<br>
+            • Quarta: Jejum 09h | Culto de Milagres 20h<br>
+            • Quinta: Escola Sacerdócio Real 20h<br>
+            • Sábado: Escola Bíblica 18h | Culto Inconformados 20h<br>
+            • Domingo: Culto da Família 19h | 1º: Santa Ceia | 2º: Primícias</p>
+        </div>
+
+        <!-- Cabeçalho dos Dias da Semana -->
+        <div class="grade-mes">
+            <div class="cabecalho-dia">Dom</div>
+            <div class="cabecalho-dia">Seg</div>
+            <div class="cabecalho-dia">Ter</div>
+            <div class="cabecalho-dia">Qua</div>
+            <div class="cabecalho-dia">Qui</div>
+            <div class="cabecalho-dia">Sex</div>
+            <div class="cabecalho-dia">Sáb</div>
+
+            <!-- Dias Vazios (antes do dia 1) -->
+            <div class="dia-vazio"></div>
+            <div class="dia-vazio"></div>
+            <div class="dia-vazio"></div>
+            <div class="dia-vazio"></div>
+            <div class="dia-vazio"></div>
+            <div class="dia-vazio"></div>
+
+            <!-- Dia 1 - Sábado -->
+            <div class="dia-evento">
+                <div class="numero-dia">01</div>
+                <div class="evento">18h Escola Bíblica</div>
+                <div class="evento">20h Inconformados</div>
+            </div>
+
+            <!-- Dia 2 - Domingo (1º do mês = Santa Ceia) -->
+            <div class="dia-evento">
+                <div class="numero-dia">02</div>
+                <div class="evento evento-especial">19h Culto SANTA CEIA</div>
+            </div>
+
+            <!-- Dia 3 - Segunda (1ª do mês = Oração Legendários + Projeto Jonas) -->
+            <div class="dia-evento">
+                <div class="numero-dia">03</div>
+                <div class="evento evento-especial">05h Oração Legendários</div>
+                <div class="evento">18h Projeto Jonas</div>
+            </div>
+
+            <!-- Dia 4 - Terça -->
+            <div class="dia-evento">
+                <div class="numero-dia">04</div>
+                <div class="evento">20h Escola de Ester</div>
+            </div>
+
+            <!-- Dia 5 - Quarta -->
+            <div class="dia-evento">
+                <div class="numero-dia">05</div>
+                <div class="evento">09h Jejum</div>
+                <div class="evento">20h Culto de Milagres</div>
+            </div>
+
+            <!-- Dia 6 - Quinta -->
+            <div class="dia-evento">
+                <div class="numero-dia">06</div>
+                <div class="evento">20h Escola Sacerdócio Real</div>
+            </div>
+
+            <!-- Dia 7 - Sexta -->
+            <div class="dia-evento">
+                <div class="numero-dia">07</div>
+            </div>
+
+            <!-- Dia 8 - Sábado -->
+            <div class="dia-evento">
+                <div class="numero-dia">08</div>
+                <div class="evento">18h Escola Bíblica</div>
+                <div class="evento">20h Inconformados</div>
+            </div>
+
+            <!-- Dia 9 - Domingo (2º do mês = Primícias) -->
+            <div class="dia-evento">
+                <div class="numero-dia">09</div>
+                <div class="evento evento-especial">19h Culto das PRIMÍCIAS</div>
+            </div>
+
+            <!-- Dia 10 - Segunda -->
+            <div class="dia-evento">
+                <div class="numero-dia">10</div>
+                <div class="evento">18h Projeto Jonas</div>
+            </div>
+
+            <!-- Dia 11 - Terça -->
+            <div class="dia-evento">
+                <div class="numero-dia">11</div>
+                <div class="evento">20h Escola de Ester</div>
+            </div>
+
+            <!-- Dia 12 - Quarta -->
+            <div class="dia-evento">
+                <div class="numero-dia">12</div>
+                <div class="evento">09h Jejum</div>
+                <div class="evento">20h Culto de Milagres</div>
+            </div>
+
+            <!-- Dia 13 - Quinta -->
+            <div class="dia-evento">
+                <div class="numero-dia">13</div>
+                <div class="evento">20h Escola Sacerdócio Real</div>
+            </div>
+
+            <!-- Dia 14 - Sexta -->
+            <div class="dia-evento">
+                <div class="numero-dia">14</div>
+            </div>
+
+            <!-- Dia 15 - Sábado -->
+            <div class="dia-evento">
+                <div class="numero-dia">15</div>
+                <div class="evento">18h Escola Bíblica</div>
+                <div class="evento">20h Inconformados</div>
+            </div>
+
+            <!-- Dia 16 - Domingo -->
+            <div class="dia-evento">
+                <div class="numero-dia">16</div>
+                <div class="evento">19h Culto da Família</div>
+            </div>
+
+            <!-- Dia 17 - Segunda -->
+            <div class="dia-evento">
+                <div class="numero-dia">17</div>
+                <div class="evento">18h Projeto Jonas</div>
+            </div>
+
+            <!-- Dia 18 - Terça -->
+            <div class="dia-evento">
+                <div class="numero-dia">18</div>
+                <div class="evento">20h Escola de Ester</div>
+            </div>
+
+            <!-- Dia 19 - Quarta -->
+            <div class="dia-evento">
+                <div class="numero-dia">19</div>
+                <div class="evento">09h Jejum</div>
+                <div class="evento">20h Culto de Milagres</div>
+            </div>
+
+            <!-- Dia 20 - Quinta -->
+            <div class="dia-evento">
+                <div class="numero-dia">20</div>
+                <div class="evento">20h Escola Sacerdócio Real</div>
+            </div>
+
+            <!-- Dia 21 - Sexta -->
+            <div class="dia-evento">
+                <div class="numero-dia">21</div>
+            </div>
+
+            <!-- Dia 22 - Sábado -->
+            <div class="dia-evento">
+                <div class="numero-dia">22</div>
+                <div class="evento">18h Escola Bíblica</div>
+                <div class="evento">20h Inconformados</div>
+            </div>
+
+            <!-- Dia 23 - Domingo -->
+            <div class="dia-evento">
+                <div class="numero-dia">23</div>
+                <div class="evento">19h Culto da Família</div>
+            </div>
+
+            <!-- Dia 24 - Segunda -->
+            <div class="dia-evento">
+                <div class="numero-dia">24</div>
+                <div class="evento">18h Projeto Jonas</div>
+            </div>
+
+            <!-- Dia 25 - Terça -->
+            <div class="dia-evento">
+                <div class="numero-dia">25</div>
+                <div class="evento">20h Escola de Ester</div>
+            </div>
+
+            <!-- Dia 26 - Quarta -->
+            <div class="dia-evento">
+                <div class="numero-dia">26</div>
+                <div class="evento">09h Jejum</div>
+                <div class="evento">20h Culto de Milagres</div>
+            </div>
+
+            <!-- Dia 27 - Quinta -->
+            <div class="dia-evento">
+                <div class="numero-dia">27</div>
+                <div class="evento">20h Escola Sacerdócio Real</div>
+            </div>
+
+            <!-- Dia 28 - Sexta (Especial) -->
+            <div class="dia-evento">
+                <div class="numero-dia">28</div>
+                <div class="evento evento-especial">19h Churrasco e Culto dos Homens</div>
+            </div>
+
+            <!-- Dia 29 - Sábado -->
+            <div class="dia-evento">
+                <div class="numero-dia">29</div>
+                <div class="evento">18h Escola Bíblica</div>
+                <div class="evento">20h Inconformados</div>
+            </div>
+
+            <!-- Dia 30 - Domingo -->
+            <div class="dia-evento">
+                <div class="numero-dia">30</div>
+                <div class="evento">19h Culto da Família</div>
+            </div>
+
+            <!-- Dia 31 - Segunda -->
+            <div class="dia-evento">
+                <div class="numero-dia">31</div>
+                <div class="evento">18h Projeto Jonas</div>
+            </div>
         </div>
     </main>
 
-    <!-- Rodapé - PADRONIZADO COM O INDEX -->
+    <!-- Rodapé -->
     <footer>
         <ul class="menu-rodape">
             <li><a href="redes.html">Redes Sociais</a></li>
