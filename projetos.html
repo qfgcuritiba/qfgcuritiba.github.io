@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Em Construção - Igreja Quadrangular Família Global</title>
+    <title>Projetos - Igreja Quadrangular Família Global</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
         
-        /* Cabeçalho - PADRONIZADO COM O INDEX.HTML */
+        /* Cabeçalho - PADRONIZADO */
         header {
             width: 100%;
             padding: 20px;
@@ -62,10 +62,10 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             position: relative;
             z-index: 1;
-            max-width: 700px;
+            max-width: 850px;
             padding-top: 30px;
             width: 100%;
         }
@@ -76,7 +76,7 @@
             color: #ffd700;
             text-decoration: none;
             font-weight: bold;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             display: flex;
             align-items: center;
             gap: 5px;
@@ -86,37 +86,71 @@
             opacity: 0.7;
         }
 
-        /* Mensagem de Construção */
-        .caixa-construcao {
-            padding: 40px 30px;
-            border: 2px solid rgba(255,215,0,0.3);
-            border-radius: 12px;
-            background-color: rgba(255,255,255,0.03);
-            box-shadow: 0 0 20px rgba(255,215,0,0.1);
-        }
-        .enfeite {
+        h1 {
+            font-size: 2.2rem;
             color: #ffd700;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            letter-spacing: 8px;
+            margin-bottom: 35px;
         }
-        .titulo-construcao {
-            font-size: 1.8rem;
+
+        /* Estilo de Cada Projeto */
+        .projeto {
+            width: 100%;
+            padding: 25px 20px;
+            margin-bottom: 35px;
+            border-bottom: 1px solid rgba(255,215,0,0.25);
+            text-align: left;
+        }
+        .projeto:last-child { border-bottom: none; }
+
+        .titulo-projeto {
+            font-size: 1.6rem;
             color: #ffd700;
             margin-bottom: 15px;
+            text-align: center;
         }
-        .texto-construcao {
-            font-size: 1.2rem;
-            line-height: 1.6;
+
+        /* Galeria de Imagens */
+        .galeria-projeto {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .img-projeto {
+            width: 100%;
+            max-width: 240px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 12px rgba(255,215,0,0.18);
+        }
+
+        .texto-projeto {
+            font-size: 1rem;
+            line-height: 1.7;
             opacity: 0.9;
+            text-align: justify;
         }
+        .texto-projeto p { margin-bottom: 12px; }
+        .destaque-versiculo {
+            color: #ffd700;
+            font-weight: bold;
+            text-align: center;
+            margin: 15px 0;
+            font-style: italic;
+        }
+        .pilares {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+        .pilares li { margin-bottom: 8px; }
 
         /* Rodapé - PADRONIZADO */
         footer {
             width: 100%;
             padding: 20px;
             background-color: rgba(0,0,0,0.2);
-            margin-top: 40px;
+            margin-top: 20px;
             position: relative;
             z-index: 1;
         }
@@ -139,9 +173,10 @@
 
         @media (max-width: 500px) {
             .marca-dagua { width: 300px; height: 300px; }
-            .enfeite { font-size: 2rem; }
-            .titulo-construcao { font-size: 1.5rem; }
-            .texto-construcao { font-size: 1.05rem; }
+            h1 { font-size: 1.7rem; }
+            .titulo-projeto { font-size: 1.4rem; }
+            .img-projeto { max-width: 90%; }
+            .texto-projeto { font-size: 0.95rem; }
             .menu-cabecalho, .menu-rodape { gap: 15px; }
         }
     </style>
@@ -162,18 +197,62 @@
     </header>
 
     <main class="conteudo-principal">
-        <!-- Link Voltar -->
         <a href="index.html" class="btn-voltar">← Voltar para página inicial</a>
 
-        <div class="caixa-construcao">
-            <div class="enfeite">✦ ✦ ✦</div>
-            <h2 class="titulo-construcao">Página em Construção</h2>
-            <p class="texto-construcao">
-                Estamos preparando algo especial para você!<br>
-                Em breve teremos novidades abençoadas.<br>
-                <br>
-                Deus abençoe a todos! ❤️
-            </p>
+        <h1>🤝 Nossos Projetos</h1>
+
+        <!-- Projeto Joana´s -->
+        <div class="projeto">
+            <h2 class="titulo-projeto">Projeto Joana´s</h2>
+            
+            <div class="galeria-projeto">
+                <img src="imagens/im14.jpeg" alt="Projeto Joana´s" class="img-projeto">
+                <img src="imagens/im15.jpeg" alt="Projeto Joana´s" class="img-projeto">
+                <img src="imagens/im16.jpeg" alt="Projeto Joana´s" class="img-projeto">
+            </div>
+
+            <div class="texto-projeto">
+                <!-- Você pode colocar o texto do Projeto Joana´s aqui quando tiver pronto -->
+                <p style="text-align:center; opacity:0.8;">Em breve mais informações sobre o Projeto Joana´s.</p>
+            </div>
+        </div>
+
+        <!-- Projeto Resgate 1:8 -->
+        <div class="projeto">
+            <h2 class="titulo-projeto">Projeto Resgate 1:8</h2>
+            
+            <div class="galeria-projeto">
+                <img src="imagens/im17.jpeg" alt="Projeto Resgate 1:8" class="img-projeto">
+                <img src="imagens/im18.jpeg" alt="Projeto Resgate 1:8" class="img-projeto">
+                <img src="imagens/im19.jpeg" alt="Projeto Resgate 1:8" class="img-projeto">
+            </div>
+
+            <div class="texto-projeto">
+                <p>O Projeto Resgate 1:8 é uma iniciativa dedicada a preparar cristãos para viver o evangelismo de forma prática, capacitando pessoas para anunciar Jesus, servir no campo missionário e fortalecer a cultura evangelística nas igrejas e comunidades.</p>
+
+                <p>Inspirado em Atos 1:8, o projeto tem como propósito cumprir a Grande Comissão por meio da formação de discípulos comprometidos em testemunhar Cristo onde estiverem.</p>
+
+                <p>Mais do que um curso, o Resgate 1:8 busca desenvolver uma cultura de evangelismo, oferecendo treinamentos, capacitações, ações missionárias, ações sociais a grupos e comunidades carentes e experiências práticas e recursos que ajudem pessoas a compartilhar o Evangelho com amor, coragem e fidelidade às Escrituras.</p>
+
+                <p>Seu nome nasceu a partir do testemunho de seu fundador, Pastor Jean Felipe Matos, que experimentou o resgate transformador de Jesus Cristo após anos afastado da fé e como usuário de drogas. Essa experiência deu origem ao propósito que permanece até hoje: preparar pessoas para que outras vidas também sejam alcançadas pelo Evangelho.</p>
+
+                <p>O número 1:8 faz referência ao texto de Atos 1:8:</p>
+
+                <div class="destaque-versiculo">
+                    “Mas recebereis poder, ao descer sobre vós o Espírito Santo, e sereis minhas testemunhas…”
+                </div>
+
+                <p>Esse versículo resume a essência do projeto: receber, preparar e enviar discípulos para testemunhar de Cristo até os confins da terra.</p>
+
+                <p>O Resgate 1:8 está fundamentado em três pilares:</p>
+                <ul class="pilares">
+                    <li><strong>Preparar:</strong> Capacitar cristãos por meio de cursos, treinamentos e experiências práticas de evangelismo.</li>
+                    <li><strong>Enviar:</strong> Incentivar e mobilizar pessoas para servir no campo missionário e fortalecer ações evangelísticas.</li>
+                    <li><strong>Resgatar:</strong> Anunciar Jesus Cristo, crendo que vidas são transformadas pelo poder do Evangelho.</li>
+                </ul>
+
+                <p style="text-align:center; font-weight:bold; color:#ffd700; margin-top:15px;">Porque o resgate começa quando alguém anuncia Jesus a alguém!</p>
+            </div>
         </div>
     </main>
 
