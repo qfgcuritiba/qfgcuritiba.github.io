@@ -48,9 +48,20 @@
             width: 100%;
             max-width: 600px;
             height: auto;
-            margin: 0 0 30px;
+            margin: 0 0 20px;
             border-radius: 8px;
             box-shadow: 0 0 20px rgba(255,255,255,0.15);
+        }
+
+        /* VIDEO ADICIONADO */
+        .video-apresentacao {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            margin: 0 0 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(255,215,0,0.2);
+            background-color: #000;
         }
 
         .conteudo-principal {
@@ -232,7 +243,8 @@
             .titulo-horarios { font-size: 1.4rem; }
             .aviso { font-size: 1.1rem; }
             .menu-cabecalho, .menu-rodape { gap: 15px; }
-            .banner { margin: 0 0 20px; }
+            .banner { margin: 0 0 15px; }
+            .video-apresentacao { max-width: 90%; margin-bottom: 25px; }
             .tabela-horarios th, .tabela-horarios td { padding: 8px; font-size: 0.9rem; }
             .caixa-chat { width: 90%; right: 5%; bottom: 90px; }
             .botao-assistente { right: 15px; bottom: 15px; font-size: 0.85rem; padding: 10px 16px; }
@@ -256,6 +268,12 @@
         <img src="logo-igreja.png" alt="Logo Igreja Quadrangular Família Global" class="logo">
         <h1>Igreja Quadrangular Família Global</h1>
         <img src="banner1.jpeg" alt="Banner Igreja Quadrangular Família Global" class="banner">
+
+        <!-- VIDEO ADICIONADO AQUI -->
+        <video class="video-apresentacao" controls preload="metadata">
+            <source src="imagens/vd1.mp4" type="video/mp4">
+            Seu navegador não suporta a reprodução de vídeos.
+        </video>
 
         <!-- Título e Tabela de Horários dos Cultos -->
         <h2 class="titulo-horarios">Nossos Horários</h2>
@@ -288,7 +306,6 @@
 
         <div class="contato">
             <p>Ministério: Bp. William Ortiz</p>
-        
         </div>
     </main>
 
