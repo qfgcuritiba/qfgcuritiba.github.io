@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Em Construção - Igreja Quadrangular Família Global</title>
+    <title>Redes Sociais - Igreja Quadrangular Família Global</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
         
-        /* Cabeçalho - PADRONIZADO COM O INDEX.HTML */
+        /* Cabeçalho - PADRONIZADO */
         header {
             width: 100%;
             padding: 20px;
@@ -62,7 +62,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             position: relative;
             z-index: 1;
             max-width: 700px;
@@ -76,7 +76,7 @@
             color: #ffd700;
             text-decoration: none;
             font-weight: bold;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             display: flex;
             align-items: center;
             gap: 5px;
@@ -86,29 +86,47 @@
             opacity: 0.7;
         }
 
-        /* Mensagem de Construção */
-        .caixa-construcao {
-            padding: 40px 30px;
-            border: 2px solid rgba(255,215,0,0.3);
-            border-radius: 12px;
-            background-color: rgba(255,255,255,0.03);
-            box-shadow: 0 0 20px rgba(255,215,0,0.1);
-        }
-        .enfeite {
-            color: #ffd700;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            letter-spacing: 8px;
-        }
-        .titulo-construcao {
-            font-size: 1.8rem;
+        h1 {
+            font-size: 2.2rem;
             color: #ffd700;
             margin-bottom: 15px;
         }
-        .texto-construcao {
-            font-size: 1.2rem;
-            line-height: 1.6;
+        .subtitulo {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
             opacity: 0.9;
+        }
+
+        /* Lista de Redes Sociais */
+        .lista-redes {
+            width: 100%;
+            max-width: 450px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .item-rede {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 14px 20px;
+            border-radius: 10px;
+            background-color: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,215,0,0.2);
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        .item-rede:hover {
+            background-color: rgba(255,215,0,0.15);
+            border-color: #ffd700;
+            transform: translateY(-2px);
+        }
+        .icone-rede {
+            font-size: 1.4rem;
         }
 
         /* Rodapé - PADRONIZADO */
@@ -139,9 +157,10 @@
 
         @media (max-width: 500px) {
             .marca-dagua { width: 300px; height: 300px; }
-            .enfeite { font-size: 2rem; }
-            .titulo-construcao { font-size: 1.5rem; }
-            .texto-construcao { font-size: 1.05rem; }
+            h1 { font-size: 1.7rem; }
+            .subtitulo { font-size: 1rem; }
+            .item-rede { font-size: 1rem; padding: 12px 15px; }
+            .icone-rede { font-size: 1.2rem; }
             .menu-cabecalho, .menu-rodape { gap: 15px; }
         }
     </style>
@@ -162,18 +181,33 @@
     </header>
 
     <main class="conteudo-principal">
-        <!-- Link Voltar -->
         <a href="index.html" class="btn-voltar">← Voltar para página inicial</a>
 
-        <div class="caixa-construcao">
-            <div class="enfeite">✦ ✦ ✦</div>
-            <h2 class="titulo-construcao">Página em Construção</h2>
-            <p class="texto-construcao">
-                Estamos preparando algo especial para você!<br>
-                Em breve teremos novidades abençoadas.<br>
-                <br>
-                Deus abençoe a todos! ❤️
-            </p>
+        <h1>📱 Nossas Redes</h1>
+        <p class="subtitulo">Siga-nos, acompanhe as mensagens e fique por dentro de tudo o que acontece! ❤️</p>
+
+        <div class="lista-redes">
+            <a href="COLOQUE_AQUI_SEU_LINK" target="_blank" class="item-rede">
+                <span class="icone-rede">📘</span> Facebook
+            </a>
+            <a href="https://www.youtube.com/@QFG_Curitiba" target="_blank" class="item-rede">
+                <span class="icone-rede">▶️</span> YouTube
+            </a>
+            <a href="COLOQUE_AQUI_SEU_LINK" target="_blank" class="item-rede">
+                <span class="icone-rede">📷</span> Instagram
+            </a>
+            <a href="COLOQUE_AQUI_SEU_LINK" target="_blank" class="item-rede">
+                <span class="icone-rede">🖼️</span> Flickr
+            </a>
+            <a href="COLOQUE_AQUI_SEU_LINK" target="_blank" class="item-rede">
+                <span class="icone-rede">🎵</span> TikTok
+            </a>
+            <a href="COLOQUE_AQUI_SEU_LINK" target="_blank" class="item-rede">
+                <span class="icone-rede">📱</span> AppChurch
+            </a>
+            <a href="https://wa.me/5541997721943" target="_blank" class="item-rede">
+                <span class="icone-rede">💬</span> WhatsApp
+            </a>
         </div>
     </main>
 
