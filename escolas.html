@@ -86,6 +86,34 @@
             opacity: 0.7;
         }
 
+        /* Aviso Importante */
+        .aviso-escolas {
+            background-color: rgba(255,215,0,0.08);
+            border: 1px solid rgba(255,215,0,0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 35px;
+            text-align: center;
+        }
+        .aviso-escolas h4 {
+            color: #ffd700;
+            font-size: 1.15rem;
+            margin-bottom: 12px;
+        }
+        .aviso-escolas p {
+            font-size: 0.98rem;
+            line-height: 1.7;
+            opacity: 0.92;
+            text-align: justify;
+            margin-bottom: 10px;
+        }
+        .aviso-destaque {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #ffd700;
+            margin-top: 5px;
+        }
+
         /* Estilo de Cada Escola */
         .escola {
             width: 100%;
@@ -157,6 +185,7 @@
             }
             .imagem-escola { max-width: 85%; }
             .texto-escola { text-align: center; }
+            .aviso-escolas p { text-align: center; }
         }
 
         @media (max-width: 500px) {
@@ -184,6 +213,14 @@
 
     <main class="conteudo-principal">
         <a href="index.html" class="btn-voltar">← Voltar para página inicial</a>
+
+        <!-- AVISO IMPORTANTE MANTIDO -->
+        <div class="aviso-escolas">
+            <h4>📌 Uma importante informação</h4>
+            <p>A <strong>Escola de Ester</strong> e a <strong>Escola Sacerdócio Real</strong> não são ministérios exclusivos da Igreja Quadrangular Família Global. Trata-se de um movimento <strong>interdenominacional</strong>, cuja visão nasceu em Joinville/SC e hoje está presente em mais de <strong>200 escolas espalhadas por todo o Brasil</strong>.</p>
+            <p>Aqui em Curitiba, a <strong>QFG</strong> sente-se honrada e abençoada em ceder espaço e servir ao Reino do Senhor, acolhendo e participando ativamente desse grande trabalho que une irmãos de diferentes igrejas na edificação da Palavra e na formação de vidas.</p>
+            <p class="aviso-destaque">Somos apenas parte de algo muito maior: a obra de Deus que atravessa fronteiras e une corações em um só propósito! ❤️</p>
+        </div>
 
         <!-- Escola Sacerdócio Real -->
         <div class="escola">
