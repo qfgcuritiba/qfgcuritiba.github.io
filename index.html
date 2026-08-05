@@ -43,25 +43,56 @@
             padding: 0 20px 20px;
         }
 
-        /* Banner */
-        .banner {
+        /* === SEÇÃO: NOSSA SEMANA NA QFG === */
+        .secao-semana {
             width: 100%;
             max-width: 600px;
-            height: auto;
-            margin: 0 0 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 20px rgba(255,255,255,0.15);
-        }
-
-        /* VIDEO ADICIONADO */
-        .video-apresentacao {
-            width: 100%;
-            max-width: 400px;
-            height: auto;
             margin: 0 0 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(255,215,0,0.2);
-            background-color: #000;
+        }
+        .titulo-semana {
+            font-size: 1.8rem;
+            color: #ffd700;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .grade-dias {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 15px;
+        }
+        .cartao-dia {
+            background-color: rgba(255,255,255,0.04);
+            border-radius: 10px;
+            padding: 12px;
+            box-shadow: 0 0 12px rgba(255,215,0,0.12);
+            transition: transform 0.3s ease;
+        }
+        .cartao-dia:hover {
+            transform: translateY(-4px);
+        }
+        .cartao-dia h3 {
+            color: #ffd700;
+            font-size: 1.05rem;
+            margin-bottom: 10px;
+        }
+        .imagem-dia {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+        .duas-imagens {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px;
+        }
+        .imagem-meia {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
         }
 
         .conteudo-principal {
@@ -240,11 +271,11 @@
         @media (max-width: 500px) {
             .logo { width: 200px; height: 200px; }
             h1 { font-size: 1.6rem; }
+            .titulo-semana { font-size: 1.4rem; }
             .titulo-horarios { font-size: 1.4rem; }
             .aviso { font-size: 1.1rem; }
             .menu-cabecalho, .menu-rodape { gap: 15px; }
-            .banner { margin: 0 0 15px; }
-            .video-apresentacao { max-width: 90%; margin-bottom: 25px; }
+            .imagem-dia, .imagem-meia { height: 100px; }
             .tabela-horarios th, .tabela-horarios td { padding: 8px; font-size: 0.9rem; }
             .caixa-chat { width: 90%; right: 5%; bottom: 90px; }
             .botao-assistente { right: 15px; bottom: 15px; font-size: 0.85rem; padding: 10px 16px; }
@@ -252,7 +283,7 @@
     </style>
 </head>
 <body>
-    <!-- Cabeçalho - CONTEÚDO ORIGINAL, APENAS ESTILO ALTERADO -->
+    <!-- Cabeçalho - CONTEÚDO ORIGINAL -->
     <header>
         <ul class="menu-cabecalho">
             <li><a href="quem-somos.html">Quem somos</a></li>
@@ -264,16 +295,48 @@
     </header>
 
     <main class="conteudo-principal">
-        <!-- Logo → Título → Banner -->
+        <!-- Logo → Título → Semana QFG -->
         <img src="logo-igreja.png" alt="Logo Igreja Quadrangular Família Global" class="logo">
         <h1>Igreja Quadrangular Família Global</h1>
-        <img src="banner1.jpeg" alt="Banner Igreja Quadrangular Família Global" class="banner">
 
-        <!-- VIDEO ADICIONADO AQUI -->
-        <video class="video-apresentacao" controls preload="metadata">
-            <source src="imagens/vd1.mp4" type="video/mp4">
-            Seu navegador não suporta a reprodução de vídeos.
-        </video>
+        <!-- === NOVA SEÇÃO: NOSSA SEMANA NA QFG === -->
+        <section class="secao-semana">
+            <h2 class="titulo-semana">Nossa semana na QFG Curitiba</h2>
+            <div class="grade-dias">
+                <!-- Segunda-Feira -->
+                <div class="cartao-dia">
+                    <h3>Segunda-Feira</h3>
+                    <img src="LGND.JPEG" alt="Segunda-Feira" class="imagem-dia">
+                </div>
+
+                <!-- Quarta-Feira → DUAS IMAGENS -->
+                <div class="cartao-dia">
+                    <h3>Quarta-Feira</h3>
+                    <div class="duas-imagens">
+                        <img src="Jejum.JPEG" alt="Jejum" class="imagem-meia">
+                        <img src="quarta.jpeg" alt="Quarta" class="imagem-meia">
+                    </div>
+                </div>
+
+                <!-- Quinta-Feira -->
+                <div class="cartao-dia">
+                    <h3>Quinta-Feira</h3>
+                    <img src="mulher.JPEG" alt="Quinta-Feira" class="imagem-dia">
+                </div>
+
+                <!-- Sábado -->
+                <div class="cartao-dia">
+                    <h3>Sábado</h3>
+                    <img src="Inconformados.jpeg" alt="Inconformados" class="imagem-dia">
+                </div>
+
+                <!-- Domingo -->
+                <div class="cartao-dia">
+                    <h3>Domingo</h3>
+                    <img src="Primicias.jpeg" alt="Primícias" class="imagem-dia">
+                </div>
+            </div>
+        </section>
 
         <!-- Título e Tabela de Horários dos Cultos -->
         <h2 class="titulo-horarios">Nossos Horários</h2>
