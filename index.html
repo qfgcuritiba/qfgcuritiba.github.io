@@ -81,6 +81,11 @@
             object-fit: cover;
             border-radius: 6px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        .imagem-dia:hover {
+            transform: scale(1.03);
         }
         .duas-imagens {
             display: grid;
@@ -93,6 +98,59 @@
             object-fit: cover;
             border-radius: 6px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        .imagem-meia:hover {
+            transform: scale(1.03);
+        }
+
+        /* === JANELA POPUP DE IMAGEM === */
+        .popup-imagem-fundo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            padding: 20px;
+        }
+        .popup-imagem-conteudo {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+        }
+        .popup-imagem {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 30px rgba(255,215,0,0.3);
+        }
+        .popup-fechar {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            background-color: #ffd700;
+            color: #1a1a2e;
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+            z-index: 10000;
+        }
+        .popup-fechar:hover {
+            background-color: #fff;
         }
 
         .conteudo-principal {
@@ -109,6 +167,7 @@
             border-radius: 50%;
             box-shadow: 0 0 25px rgba(255,255,255,0.2);
             object-fit: cover;
+            cursor: pointer;
         }
         h1 {
             font-size: 2.2rem;
@@ -295,9 +354,17 @@
         </ul>
     </header>
 
+    <!-- === JANELA POPUP DE IMAGEM === -->
+    <div class="popup-imagem-fundo" id="popupImagem" onclick="fecharPopupImagem()">
+        <div class="popup-imagem-conteudo" onclick="event.stopPropagation()">
+            <button class="popup-fechar" onclick="fecharPopupImagem()">×</button>
+            <img src="" alt="Imagem ampliada" class="popup-imagem" id="imagemAmpliada">
+        </div>
+    </div>
+
     <main class="conteudo-principal">
         <!-- Logo → Título → Semana QFG -->
-        <img src="imagens/logo-igreja.png" alt="Logo Igreja Quadrangular Família Global" class="logo">
+        <img src="imagens/logo-igreja.png" alt="Logo Igreja Quadrangular Família Global" class="logo" onclick="abrirImagem(this.src)">
         <h1>Igreja Quadrangular Família Global</h1>
 
         <!-- === NOVA SEÇÃO: NOSSA SEMANA NA QFG === -->
@@ -307,34 +374,34 @@
                 <!-- Segunda-Feira -->
                 <div class="cartao-dia">
                     <h3>Segunda-Feira</h3>
-                    <img src="imagens/LGND.JPEG" alt="Segunda-Feira" class="imagem-dia">
+                    <img src="imagens/LGND.JPEG" alt="Segunda-Feira" class="imagem-dia" onclick="abrirImagem(this.src)">
                 </div>
 
                 <!-- Quarta-Feira → DUAS IMAGENS -->
                 <div class="cartao-dia">
                     <h3>Quarta-Feira</h3>
                     <div class="duas-imagens">
-                        <img src="imagens/jejum.JPEG" alt="Jejum" class="imagem-meia">
-                        <img src="imagens/quarta.jpeg" alt="Quarta" class="imagem-meia">
+                        <img src="imagens/jejum.JPEG" alt="Jejum" class="imagem-meia" onclick="abrirImagem(this.src)">
+                        <img src="imagens/quarta.jpeg" alt="Quarta" class="imagem-meia" onclick="abrirImagem(this.src)">
                     </div>
                 </div>
 
                 <!-- Quinta-Feira -->
                 <div class="cartao-dia">
                     <h3>Quinta-Feira</h3>
-                    <img src="imagens/mulher.JPEG" alt="Quinta-Feira" class="imagem-dia">
+                    <img src="imagens/mulher.JPEG" alt="Quinta-Feira" class="imagem-dia" onclick="abrirImagem(this.src)">
                 </div>
 
                 <!-- Sábado -->
                 <div class="cartao-dia">
                     <h3>Sábado</h3>
-                    <img src="imagens/inconformados.jpeg" alt="Inconformados" class="imagem-dia">
+                    <img src="imagens/inconformados.jpeg" alt="Inconformados" class="imagem-dia" onclick="abrirImagem(this.src)">
                 </div>
 
                 <!-- Domingo -->
                 <div class="cartao-dia">
                     <h3>Domingo</h3>
-                    <img src="imagens/primicias.jpeg" alt="Primícias" class="imagem-dia">
+                    <img src="imagens/primicias.jpeg" alt="Primícias" class="imagem-dia" onclick="abrirImagem(this.src)">
                 </div>
             </div>
         </section>
@@ -410,6 +477,22 @@
     </div>
 
     <script>
+        // === FUNÇÕES DA JANELA POPUP DE IMAGEM ===
+        function abrirImagem(caminho) {
+            document.getElementById('imagemAmpliada').src = caminho;
+            document.getElementById('popupImagem').style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // trava rolagem
+        }
+        function fecharPopupImagem() {
+            document.getElementById('popupImagem').style.display = 'none';
+            document.getElementById('imagemAmpliada').src = '';
+            document.body.style.overflow = 'auto'; // libera rolagem
+        }
+        // Tecla ESC fecha a imagem
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') fecharPopupImagem();
+        });
+
         // Lista reserva de versículos (se a API falhar, usa esses)
         const versiculosReserva = [
             '"Porque eu bem sei os pensamentos que tenho a vosso respeito, diz o Senhor; pensamentos de paz, e não de mal, para vos dar o fim que esperais."<br><em>Jeremias 29:11</em>',
