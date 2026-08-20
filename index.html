@@ -171,8 +171,14 @@
         }
         h1 {
             font-size: 2.2rem;
-            margin-bottom: 20px;
+            margin-bottom: 5px;
             color: #ffd700;
+        }
+        .subtitulo {
+            font-size: 1.3rem;
+            color: #fff;
+            margin-bottom: 20px;
+            opacity: 0.85;
         }
         .aviso {
             font-size: 1.3rem;
@@ -331,6 +337,7 @@
         @media (max-width: 500px) {
             .logo { width: 200px; height: 200px; }
             h1 { font-size: 1.6rem; }
+            .subtitulo { font-size: 1.1rem; }
             .titulo-semana { font-size: 1.4rem; }
             .titulo-horarios { font-size: 1.4rem; }
             .aviso { font-size: 1.1rem; }
@@ -363,9 +370,10 @@
     </div>
 
     <main class="conteudo-principal">
-        <!-- Logo → Título → Semana QFG -->
+        <!-- Logo → Título → Templo Arca → Semana QFG -->
         <img src="imagens/logo-igreja.png" alt="Logo Igreja Quadrangular Família Global" class="logo" onclick="abrirImagem(this.src)">
         <h1>Igreja Quadrangular Família Global</h1>
+        <p class="subtitulo">Templo Arca</p>
 
         <!-- === NOVA SEÇÃO: NOSSA SEMANA NA QFG === -->
         <section class="secao-semana">
